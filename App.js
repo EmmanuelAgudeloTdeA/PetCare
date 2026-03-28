@@ -1,10 +1,8 @@
-import React from 'react'
-import Navigation from './src/navigation/Tab'
+import React from 'react';
+import RootNavigation from './src/navigation/stack/Root';
 
 const App = () => {
-  return (
-    <Navigation />
-  )
-}
+  return <RootNavigation />;
+};
 
-export default App
+export default App;
