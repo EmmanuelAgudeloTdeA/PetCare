@@ -107,6 +107,14 @@ android {
     }
 }
 
+tasks.register("copyIoniconsFont", Copy) {
+    from("${projectDir}/../../node_modules/@react-native-vector-icons/ionicons/fonts")
+    include("Ionicons.ttf")
+    into("${projectDir}/src/main/assets/fonts")
+}
+
+preBuild.dependsOn(copyIoniconsFont)
+
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
